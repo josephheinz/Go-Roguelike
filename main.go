@@ -2,6 +2,7 @@ package main
 import (
   "fmt"
   "go-roguelike/utils"
+  "go-roguelike/gameMap"
 )
 
 
@@ -10,7 +11,13 @@ func main() {
   player := utils.Entity{Name:"player",Stats:utils.Stats{Health:10,MaxHealth:10,Strength:1},Icon:"@",Color:colorCodes["red"]}
   
   fmt.Println(player)
+  /*
   for key, value := range colorCodes {
     fmt.Println(value, key)
   }
+  */
+
+  testmap := gameMap.Map{Height:10,Width:10}
+  gameMap.DisplayMap( gameMap.GenerateMapAscii( testmap ) )
+
 }
