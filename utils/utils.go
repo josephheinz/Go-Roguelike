@@ -15,6 +15,6 @@ type Entity struct {
   Name    string
   Stats   Stats
   Pos     Position
-  Icon    string
+  Icon    rune  
   Color   string 
 }
